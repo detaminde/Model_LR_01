@@ -158,7 +158,7 @@ namespace Model_LR_01
                              textBox15.BackColor = Color.Aqua;
                              backColorChanged = textBox15;
                          }
-
+                        counter++;
                      }
                  }
                  // последний символ в стэке - "+"
@@ -180,21 +180,18 @@ namespace Model_LR_01
                      else if(CurrentForm[counter] == 43)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                          textBox33.BackColor = Color.Aqua;
                          backColorChanged = textBox33;
                      }
                      else if(CurrentForm[counter] == 45)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox32.BackColor = Color.Aqua;
                          backColorChanged = textBox32;
                      }
                      else if(CurrentForm[counter] == 41)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox27.BackColor = Color.Aqua;
                          backColorChanged = textBox27;
                      }
@@ -204,30 +201,35 @@ namespace Model_LR_01
                          stack.Push(CurrentForm[counter]);
                          textBox31.BackColor = Color.Aqua;
                          backColorChanged = textBox31;
+                         counter++;
                      }
                      else if (CurrentForm[counter] == 47)
                      {
                          stack.Push(CurrentForm[counter]);
                          textBox30.BackColor = Color.Aqua;
                          backColorChanged = textBox30;
+                         counter++;
                      }
                      else if (CurrentForm[counter] == 94)
                      {
                          stack.Push(CurrentForm[counter]);
                          textBox29.BackColor = Color.Aqua;
                          backColorChanged = textBox29;
+                         counter++;
                      }
                      else if (CurrentForm[counter] == 40)
                      {
                          stack.Push(CurrentForm[counter]);
                          textBox28.BackColor = Color.Aqua;
                          backColorChanged = textBox28;
+                         counter++;
                      }
                      else if ((CurrentForm[counter] >= 65) && (CurrentForm[counter] <= 90))
                      {
                          stack.Push(CurrentForm[counter]);
                          textBox26.BackColor = Color.Aqua;
                          backColorChanged = textBox26;
+                         counter++;
                      }
 
                  }
@@ -244,28 +246,24 @@ namespace Model_LR_01
                      else if (CurrentForm[counter] == 32)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox45.BackColor = Color.Aqua;
                          backColorChanged = textBox45;
                      }
                      else if (CurrentForm[counter] == 43)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox44.BackColor = Color.Aqua;
                          backColorChanged = textBox44;
                      }
                      else if (CurrentForm[counter] == 45)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox43.BackColor = Color.Aqua;
                          backColorChanged = textBox43;
                      }
                      else if (CurrentForm[counter] == 41)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox38.BackColor = Color.Aqua;
                          backColorChanged = textBox38;
                      }
@@ -275,30 +273,35 @@ namespace Model_LR_01
                          stack.Push(CurrentForm[counter]);
                          textBox42.BackColor = Color.Aqua;
                          backColorChanged = textBox42;
+                         counter++;
                      }
                      else if (CurrentForm[counter] == 47)
                      {
                          stack.Push(CurrentForm[counter]);
                          textBox41.BackColor = Color.Aqua;
                          backColorChanged = textBox41;
+                         counter++;
                      }
                      else if (CurrentForm[counter] == 94)
                      {
                          stack.Push(CurrentForm[counter]);
                          textBox40.BackColor = Color.Aqua;
                          backColorChanged = textBox40;
+                         counter++;
                      }
                      else if (CurrentForm[counter] == 40)
                      {
                          stack.Push(CurrentForm[counter]);
                          textBox39.BackColor = Color.Aqua;
                          backColorChanged = textBox39;
+                         counter++;
                      }
                      else if ((CurrentForm[counter] >= 65) && (CurrentForm[counter] <= 90))
                      {
                          stack.Push(CurrentForm[counter]);
                          textBox37.BackColor = Color.Aqua;
                          backColorChanged = textBox37;
+                         counter++;
                      }
                  }
                  // последний символ в стэке - "*"
@@ -314,28 +317,24 @@ namespace Model_LR_01
                      else if (CurrentForm[counter] == 32)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox56.BackColor = Color.Aqua;
                          backColorChanged = textBox56;
                      }
                      else if (CurrentForm[counter] == 43)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox55.BackColor = Color.Aqua;
                          backColorChanged = textBox55;
                      }
                      else if (CurrentForm[counter] == 45)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox54.BackColor = Color.Aqua;
                          backColorChanged = textBox54;
                      }
                      else if (CurrentForm[counter] == 41)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox49.BackColor = Color.Aqua;
                          backColorChanged = textBox49;
                      }
@@ -343,14 +342,12 @@ namespace Model_LR_01
                      else if (CurrentForm[counter] == 42)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox53.BackColor = Color.Aqua;
                          backColorChanged = textBox53;
                      }
                      else if (CurrentForm[counter] == 47)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox52.BackColor = Color.Aqua;
                          backColorChanged = textBox52;
                      }
@@ -359,18 +356,21 @@ namespace Model_LR_01
                          stack.Push(CurrentForm[counter]);
                          textBox51.BackColor = Color.Aqua;
                          backColorChanged = textBox51;
+                         counter++;
                      }
                      else if (CurrentForm[counter] == 40)
                      {
                          stack.Push(CurrentForm[counter]);
                          textBox50.BackColor = Color.Aqua;
                          backColorChanged = textBox50;
+                         counter++;
                      }
                      else if ((CurrentForm[counter] >= 65) && (CurrentForm[counter] <= 90))
                      {
                          stack.Push(CurrentForm[counter]);
                          textBox48.BackColor = Color.Aqua;
                          backColorChanged = textBox48;
+                         counter++;
                      }
                  }
                  //последний символ в стэке - "/"
@@ -386,28 +386,24 @@ namespace Model_LR_01
                      else if (CurrentForm[counter] == 32)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox67.BackColor = Color.Aqua;
                          backColorChanged = textBox67;
                      }
                      else if (CurrentForm[counter] == 43)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox66.BackColor = Color.Aqua;
                          backColorChanged = textBox66;
                      }
                      else if (CurrentForm[counter] == 45)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox65.BackColor = Color.Aqua;
                          backColorChanged = textBox65;
                      }
                      else if (CurrentForm[counter] == 41)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox60.BackColor = Color.Aqua;
                          backColorChanged = textBox60;
                      }
@@ -415,14 +411,12 @@ namespace Model_LR_01
                      else if (CurrentForm[counter] == 42)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox64.BackColor = Color.Aqua;
                          backColorChanged = textBox64;
                      }
                      else if (CurrentForm[counter] == 47)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox63.BackColor = Color.Aqua;
                          backColorChanged = textBox63;
                      }
@@ -431,18 +425,21 @@ namespace Model_LR_01
                          stack.Push(CurrentForm[counter]);
                          textBox62.BackColor = Color.Aqua;
                          backColorChanged = textBox62;
+                         counter++;
                      }
                      else if (CurrentForm[counter] == 40)
                      {
                          stack.Push(CurrentForm[counter]);
                          textBox61.BackColor = Color.Aqua;
                          backColorChanged = textBox61;
+                         counter++;
                      }
                      else if ((CurrentForm[counter] >= 65) && (CurrentForm[counter] <= 90))
                      {
                          stack.Push(CurrentForm[counter]);
                          textBox59.BackColor = Color.Aqua;
                          backColorChanged = textBox59;
+                         counter++;
                      }
                  }
                  // последний символ в стэке - "^"
@@ -458,28 +455,24 @@ namespace Model_LR_01
                      else if (CurrentForm[counter] == 32)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox78.BackColor = Color.Aqua;
                          backColorChanged = textBox78;
                      }
                      else if (CurrentForm[counter] == 43)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox77.BackColor = Color.Aqua;
                          backColorChanged = textBox77;
                      }
                      else if (CurrentForm[counter] == 45)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox76.BackColor = Color.Aqua;
                          backColorChanged = textBox76;
                      }
                      else if (CurrentForm[counter] == 41)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox71.BackColor = Color.Aqua;
                          backColorChanged = textBox71;
                      }
@@ -487,21 +480,18 @@ namespace Model_LR_01
                      else if (CurrentForm[counter] == 42)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox75.BackColor = Color.Aqua;
                          backColorChanged = textBox75;
                      }
                      else if (CurrentForm[counter] == 47)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox74.BackColor = Color.Aqua;
                          backColorChanged = textBox74;
                      }
                      else if (CurrentForm[counter] == 94)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox73.BackColor = Color.Aqua;
                          backColorChanged = textBox73;
                      }
@@ -510,12 +500,14 @@ namespace Model_LR_01
                          stack.Push(CurrentForm[counter]);
                          textBox72.BackColor = Color.Aqua;
                          backColorChanged = textBox72;
+                         counter++;
                      }
                      else if ((CurrentForm[counter] >= 65) && (CurrentForm[counter] <= 90))
                      {
                          stack.Push(CurrentForm[counter]);
                          textBox70.BackColor = Color.Aqua;
                          backColorChanged = textBox70;
+                         counter++;
                      }
                  }
                  // последний символ в стэке - "("
@@ -579,7 +571,7 @@ namespace Model_LR_01
                              textBox82.BackColor = Color.Aqua;
                              backColorChanged = textBox82;
                          }
-
+                        counter++;
                      }
                  }
                  // последний символ в стэке - функция
@@ -595,28 +587,24 @@ namespace Model_LR_01
                      else if (CurrentForm[counter] == 32)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox90.BackColor = Color.Aqua;
                          backColorChanged = textBox90;
                      }
                      else if (CurrentForm[counter] == 43)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox99.BackColor = Color.Aqua;
                          backColorChanged = textBox99;
                      }
                      else if (CurrentForm[counter] == 45)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox98.BackColor = Color.Aqua;
                          backColorChanged = textBox98;
                      }
                      else if (CurrentForm[counter] == 41)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox93.BackColor = Color.Aqua;
                          backColorChanged = textBox93;
                      }
@@ -624,21 +612,18 @@ namespace Model_LR_01
                      else if (CurrentForm[counter] == 42)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox97.BackColor = Color.Aqua;
                          backColorChanged = textBox97;
                      }
                      else if (CurrentForm[counter] == 47)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox96.BackColor = Color.Aqua;
                          backColorChanged = textBox96;
                      }
                      else if (CurrentForm[counter] == 94)
                      {
                          PostfixForm.Add(stack.Pop());
-                        stack.Push(CurrentForm[counter]);
                         textBox95.BackColor = Color.Aqua;
                          backColorChanged = textBox95;
                      }
@@ -647,6 +632,7 @@ namespace Model_LR_01
                          stack.Push(CurrentForm[counter]);
                          textBox94.BackColor = Color.Aqua;
                          backColorChanged = textBox94;
+                         counter++;
                      }
                      else if ((CurrentForm[counter] >= 65) && (CurrentForm[counter] <= 90))
                      {
@@ -656,7 +642,6 @@ namespace Model_LR_01
                          backColorChanged = textBox92;
                      }
                  }
-                 counter++;
 
 
                  if (Automode_radioButton.Checked)
