@@ -30,6 +30,7 @@ namespace Model_LR_01
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.error_label = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -43,10 +44,10 @@ namespace Model_LR_01
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.cursor_listBox = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.CurrentFormula_textBox = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.stack_listBox = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -161,7 +162,8 @@ namespace Model_LR_01
             this.label18 = new System.Windows.Forms.Label();
             this.Start_button = new System.Windows.Forms.Button();
             this.Stop_button = new System.Windows.Forms.Button();
-            this.error_label = new System.Windows.Forms.Label();
+            this.nextTact_button = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -171,13 +173,14 @@ namespace Model_LR_01
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.error_label);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.groupBox4);
-            this.groupBox1.Controls.Add(this.listBox2);
+            this.groupBox1.Controls.Add(this.cursor_listBox);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.CurrentFormula_textBox);
-            this.groupBox1.Controls.Add(this.listBox1);
+            this.groupBox1.Controls.Add(this.stack_listBox);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -191,6 +194,14 @@ namespace Model_LR_01
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ы";
+            // 
+            // error_label
+            // 
+            this.error_label.AutoSize = true;
+            this.error_label.Location = new System.Drawing.Point(466, 59);
+            this.error_label.Name = "error_label";
+            this.error_label.Size = new System.Drawing.Size(0, 15);
+            this.error_label.TabIndex = 13;
             // 
             // label16
             // 
@@ -322,16 +333,16 @@ namespace Model_LR_01
             this.label5.TabIndex = 0;
             this.label5.Text = "1. Поместить символ из входной строки в стек";
             // 
-            // listBox2
+            // cursor_listBox
             // 
-            this.listBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 15;
-            this.listBox2.Location = new System.Drawing.Point(31, 152);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(68, 285);
-            this.listBox2.TabIndex = 11;
+            this.cursor_listBox.BackColor = System.Drawing.SystemColors.Control;
+            this.cursor_listBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cursor_listBox.FormattingEnabled = true;
+            this.cursor_listBox.ItemHeight = 15;
+            this.cursor_listBox.Location = new System.Drawing.Point(31, 152);
+            this.cursor_listBox.Name = "cursor_listBox";
+            this.cursor_listBox.Size = new System.Drawing.Size(68, 285);
+            this.cursor_listBox.TabIndex = 11;
             // 
             // label4
             // 
@@ -350,14 +361,14 @@ namespace Model_LR_01
             this.CurrentFormula_textBox.Size = new System.Drawing.Size(452, 23);
             this.CurrentFormula_textBox.TabIndex = 9;
             // 
-            // listBox1
+            // stack_listBox
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(115, 152);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(146, 289);
-            this.listBox1.TabIndex = 8;
+            this.stack_listBox.FormattingEnabled = true;
+            this.stack_listBox.ItemHeight = 15;
+            this.stack_listBox.Location = new System.Drawing.Point(115, 152);
+            this.stack_listBox.Name = "stack_listBox";
+            this.stack_listBox.Size = new System.Drawing.Size(146, 289);
+            this.stack_listBox.TabIndex = 8;
             // 
             // label3
             // 
@@ -498,6 +509,7 @@ namespace Model_LR_01
             // 
             this.textBox91.Location = new System.Drawing.Point(241, 210);
             this.textBox91.Name = "textBox91";
+            this.textBox91.ReadOnly = true;
             this.textBox91.Size = new System.Drawing.Size(23, 23);
             this.textBox91.TabIndex = 98;
             this.textBox91.Text = "6";
@@ -507,6 +519,7 @@ namespace Model_LR_01
             // 
             this.textBox92.Location = new System.Drawing.Point(219, 210);
             this.textBox92.Name = "textBox92";
+            this.textBox92.ReadOnly = true;
             this.textBox92.Size = new System.Drawing.Size(23, 23);
             this.textBox92.TabIndex = 97;
             this.textBox92.Text = "5";
@@ -516,6 +529,7 @@ namespace Model_LR_01
             // 
             this.textBox93.Location = new System.Drawing.Point(198, 210);
             this.textBox93.Name = "textBox93";
+            this.textBox93.ReadOnly = true;
             this.textBox93.Size = new System.Drawing.Size(23, 23);
             this.textBox93.TabIndex = 96;
             this.textBox93.Text = "2";
@@ -525,6 +539,7 @@ namespace Model_LR_01
             // 
             this.textBox94.Location = new System.Drawing.Point(176, 210);
             this.textBox94.Name = "textBox94";
+            this.textBox94.ReadOnly = true;
             this.textBox94.Size = new System.Drawing.Size(23, 23);
             this.textBox94.TabIndex = 95;
             this.textBox94.Text = "1";
@@ -534,6 +549,7 @@ namespace Model_LR_01
             // 
             this.textBox95.Location = new System.Drawing.Point(155, 210);
             this.textBox95.Name = "textBox95";
+            this.textBox95.ReadOnly = true;
             this.textBox95.Size = new System.Drawing.Size(23, 23);
             this.textBox95.TabIndex = 94;
             this.textBox95.Text = "2";
@@ -543,6 +559,7 @@ namespace Model_LR_01
             // 
             this.textBox96.Location = new System.Drawing.Point(133, 210);
             this.textBox96.Name = "textBox96";
+            this.textBox96.ReadOnly = true;
             this.textBox96.Size = new System.Drawing.Size(23, 23);
             this.textBox96.TabIndex = 93;
             this.textBox96.Text = "2";
@@ -552,6 +569,7 @@ namespace Model_LR_01
             // 
             this.textBox97.Location = new System.Drawing.Point(112, 210);
             this.textBox97.Name = "textBox97";
+            this.textBox97.ReadOnly = true;
             this.textBox97.Size = new System.Drawing.Size(23, 23);
             this.textBox97.TabIndex = 92;
             this.textBox97.Text = "2";
@@ -561,6 +579,7 @@ namespace Model_LR_01
             // 
             this.textBox98.Location = new System.Drawing.Point(90, 210);
             this.textBox98.Name = "textBox98";
+            this.textBox98.ReadOnly = true;
             this.textBox98.Size = new System.Drawing.Size(23, 23);
             this.textBox98.TabIndex = 91;
             this.textBox98.Text = "2";
@@ -570,6 +589,7 @@ namespace Model_LR_01
             // 
             this.textBox99.Location = new System.Drawing.Point(69, 210);
             this.textBox99.Name = "textBox99";
+            this.textBox99.ReadOnly = true;
             this.textBox99.Size = new System.Drawing.Size(23, 23);
             this.textBox99.TabIndex = 90;
             this.textBox99.Text = "2";
@@ -579,6 +599,7 @@ namespace Model_LR_01
             // 
             this.textBox100.Location = new System.Drawing.Point(47, 210);
             this.textBox100.Name = "textBox100";
+            this.textBox100.ReadOnly = true;
             this.textBox100.Size = new System.Drawing.Size(23, 23);
             this.textBox100.TabIndex = 89;
             this.textBox100.Text = "2";
@@ -589,6 +610,7 @@ namespace Model_LR_01
             this.textBox101.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBox101.Location = new System.Drawing.Point(26, 210);
             this.textBox101.Name = "textBox101";
+            this.textBox101.ReadOnly = true;
             this.textBox101.Size = new System.Drawing.Size(23, 23);
             this.textBox101.TabIndex = 88;
             this.textBox101.Text = "F";
@@ -597,6 +619,7 @@ namespace Model_LR_01
             // 
             this.textBox80.Location = new System.Drawing.Point(241, 188);
             this.textBox80.Name = "textBox80";
+            this.textBox80.ReadOnly = true;
             this.textBox80.Size = new System.Drawing.Size(23, 23);
             this.textBox80.TabIndex = 87;
             this.textBox80.Text = "6";
@@ -606,6 +629,7 @@ namespace Model_LR_01
             // 
             this.textBox81.Location = new System.Drawing.Point(219, 188);
             this.textBox81.Name = "textBox81";
+            this.textBox81.ReadOnly = true;
             this.textBox81.Size = new System.Drawing.Size(23, 23);
             this.textBox81.TabIndex = 86;
             this.textBox81.Text = "1";
@@ -615,6 +639,7 @@ namespace Model_LR_01
             // 
             this.textBox82.Location = new System.Drawing.Point(198, 188);
             this.textBox82.Name = "textBox82";
+            this.textBox82.ReadOnly = true;
             this.textBox82.Size = new System.Drawing.Size(23, 23);
             this.textBox82.TabIndex = 85;
             this.textBox82.Text = "3";
@@ -624,6 +649,7 @@ namespace Model_LR_01
             // 
             this.textBox83.Location = new System.Drawing.Point(176, 188);
             this.textBox83.Name = "textBox83";
+            this.textBox83.ReadOnly = true;
             this.textBox83.Size = new System.Drawing.Size(23, 23);
             this.textBox83.TabIndex = 84;
             this.textBox83.Text = "1";
@@ -633,6 +659,7 @@ namespace Model_LR_01
             // 
             this.textBox84.Location = new System.Drawing.Point(155, 188);
             this.textBox84.Name = "textBox84";
+            this.textBox84.ReadOnly = true;
             this.textBox84.Size = new System.Drawing.Size(23, 23);
             this.textBox84.TabIndex = 83;
             this.textBox84.Text = "1";
@@ -642,6 +669,7 @@ namespace Model_LR_01
             // 
             this.textBox85.Location = new System.Drawing.Point(133, 188);
             this.textBox85.Name = "textBox85";
+            this.textBox85.ReadOnly = true;
             this.textBox85.Size = new System.Drawing.Size(23, 23);
             this.textBox85.TabIndex = 82;
             this.textBox85.Text = "1";
@@ -651,6 +679,7 @@ namespace Model_LR_01
             // 
             this.textBox86.Location = new System.Drawing.Point(112, 188);
             this.textBox86.Name = "textBox86";
+            this.textBox86.ReadOnly = true;
             this.textBox86.Size = new System.Drawing.Size(23, 23);
             this.textBox86.TabIndex = 81;
             this.textBox86.Text = "1";
@@ -660,6 +689,7 @@ namespace Model_LR_01
             // 
             this.textBox87.Location = new System.Drawing.Point(90, 188);
             this.textBox87.Name = "textBox87";
+            this.textBox87.ReadOnly = true;
             this.textBox87.Size = new System.Drawing.Size(23, 23);
             this.textBox87.TabIndex = 80;
             this.textBox87.Text = "1";
@@ -669,6 +699,7 @@ namespace Model_LR_01
             // 
             this.textBox88.Location = new System.Drawing.Point(69, 188);
             this.textBox88.Name = "textBox88";
+            this.textBox88.ReadOnly = true;
             this.textBox88.Size = new System.Drawing.Size(23, 23);
             this.textBox88.TabIndex = 79;
             this.textBox88.Text = "1";
@@ -678,6 +709,7 @@ namespace Model_LR_01
             // 
             this.textBox89.Location = new System.Drawing.Point(47, 188);
             this.textBox89.Name = "textBox89";
+            this.textBox89.ReadOnly = true;
             this.textBox89.Size = new System.Drawing.Size(23, 23);
             this.textBox89.TabIndex = 78;
             this.textBox89.Text = "5";
@@ -688,6 +720,7 @@ namespace Model_LR_01
             this.textBox90.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBox90.Location = new System.Drawing.Point(26, 188);
             this.textBox90.Name = "textBox90";
+            this.textBox90.ReadOnly = true;
             this.textBox90.Size = new System.Drawing.Size(23, 23);
             this.textBox90.TabIndex = 77;
             this.textBox90.Text = "(";
@@ -696,6 +729,7 @@ namespace Model_LR_01
             // 
             this.textBox69.Location = new System.Drawing.Point(241, 166);
             this.textBox69.Name = "textBox69";
+            this.textBox69.ReadOnly = true;
             this.textBox69.Size = new System.Drawing.Size(23, 23);
             this.textBox69.TabIndex = 76;
             this.textBox69.Text = "6";
@@ -705,6 +739,7 @@ namespace Model_LR_01
             // 
             this.textBox70.Location = new System.Drawing.Point(219, 166);
             this.textBox70.Name = "textBox70";
+            this.textBox70.ReadOnly = true;
             this.textBox70.Size = new System.Drawing.Size(23, 23);
             this.textBox70.TabIndex = 75;
             this.textBox70.Text = "1";
@@ -714,6 +749,7 @@ namespace Model_LR_01
             // 
             this.textBox71.Location = new System.Drawing.Point(198, 166);
             this.textBox71.Name = "textBox71";
+            this.textBox71.ReadOnly = true;
             this.textBox71.Size = new System.Drawing.Size(23, 23);
             this.textBox71.TabIndex = 74;
             this.textBox71.Text = "2";
@@ -723,6 +759,7 @@ namespace Model_LR_01
             // 
             this.textBox72.Location = new System.Drawing.Point(176, 166);
             this.textBox72.Name = "textBox72";
+            this.textBox72.ReadOnly = true;
             this.textBox72.Size = new System.Drawing.Size(23, 23);
             this.textBox72.TabIndex = 73;
             this.textBox72.Text = "1";
@@ -732,6 +769,7 @@ namespace Model_LR_01
             // 
             this.textBox73.Location = new System.Drawing.Point(155, 166);
             this.textBox73.Name = "textBox73";
+            this.textBox73.ReadOnly = true;
             this.textBox73.Size = new System.Drawing.Size(23, 23);
             this.textBox73.TabIndex = 72;
             this.textBox73.Text = "2";
@@ -741,6 +779,7 @@ namespace Model_LR_01
             // 
             this.textBox74.Location = new System.Drawing.Point(133, 166);
             this.textBox74.Name = "textBox74";
+            this.textBox74.ReadOnly = true;
             this.textBox74.Size = new System.Drawing.Size(23, 23);
             this.textBox74.TabIndex = 71;
             this.textBox74.Text = "2";
@@ -750,6 +789,7 @@ namespace Model_LR_01
             // 
             this.textBox75.Location = new System.Drawing.Point(112, 166);
             this.textBox75.Name = "textBox75";
+            this.textBox75.ReadOnly = true;
             this.textBox75.Size = new System.Drawing.Size(23, 23);
             this.textBox75.TabIndex = 70;
             this.textBox75.Text = "2";
@@ -759,6 +799,7 @@ namespace Model_LR_01
             // 
             this.textBox76.Location = new System.Drawing.Point(90, 166);
             this.textBox76.Name = "textBox76";
+            this.textBox76.ReadOnly = true;
             this.textBox76.Size = new System.Drawing.Size(23, 23);
             this.textBox76.TabIndex = 69;
             this.textBox76.Text = "2";
@@ -768,6 +809,7 @@ namespace Model_LR_01
             // 
             this.textBox77.Location = new System.Drawing.Point(69, 166);
             this.textBox77.Name = "textBox77";
+            this.textBox77.ReadOnly = true;
             this.textBox77.Size = new System.Drawing.Size(23, 23);
             this.textBox77.TabIndex = 68;
             this.textBox77.Text = "2";
@@ -777,6 +819,7 @@ namespace Model_LR_01
             // 
             this.textBox78.Location = new System.Drawing.Point(47, 166);
             this.textBox78.Name = "textBox78";
+            this.textBox78.ReadOnly = true;
             this.textBox78.Size = new System.Drawing.Size(23, 23);
             this.textBox78.TabIndex = 67;
             this.textBox78.Text = "2";
@@ -787,6 +830,7 @@ namespace Model_LR_01
             this.textBox79.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBox79.Location = new System.Drawing.Point(26, 166);
             this.textBox79.Name = "textBox79";
+            this.textBox79.ReadOnly = true;
             this.textBox79.Size = new System.Drawing.Size(23, 23);
             this.textBox79.TabIndex = 66;
             this.textBox79.Text = "^";
@@ -795,6 +839,7 @@ namespace Model_LR_01
             // 
             this.textBox58.Location = new System.Drawing.Point(241, 144);
             this.textBox58.Name = "textBox58";
+            this.textBox58.ReadOnly = true;
             this.textBox58.Size = new System.Drawing.Size(23, 23);
             this.textBox58.TabIndex = 65;
             this.textBox58.Text = "6";
@@ -804,6 +849,7 @@ namespace Model_LR_01
             // 
             this.textBox59.Location = new System.Drawing.Point(219, 144);
             this.textBox59.Name = "textBox59";
+            this.textBox59.ReadOnly = true;
             this.textBox59.Size = new System.Drawing.Size(23, 23);
             this.textBox59.TabIndex = 64;
             this.textBox59.Text = "1";
@@ -813,6 +859,7 @@ namespace Model_LR_01
             // 
             this.textBox60.Location = new System.Drawing.Point(198, 144);
             this.textBox60.Name = "textBox60";
+            this.textBox60.ReadOnly = true;
             this.textBox60.Size = new System.Drawing.Size(23, 23);
             this.textBox60.TabIndex = 63;
             this.textBox60.Text = "2";
@@ -822,6 +869,7 @@ namespace Model_LR_01
             // 
             this.textBox61.Location = new System.Drawing.Point(176, 144);
             this.textBox61.Name = "textBox61";
+            this.textBox61.ReadOnly = true;
             this.textBox61.Size = new System.Drawing.Size(23, 23);
             this.textBox61.TabIndex = 62;
             this.textBox61.Text = "1";
@@ -831,6 +879,7 @@ namespace Model_LR_01
             // 
             this.textBox62.Location = new System.Drawing.Point(155, 144);
             this.textBox62.Name = "textBox62";
+            this.textBox62.ReadOnly = true;
             this.textBox62.Size = new System.Drawing.Size(23, 23);
             this.textBox62.TabIndex = 61;
             this.textBox62.Text = "1";
@@ -840,6 +889,7 @@ namespace Model_LR_01
             // 
             this.textBox63.Location = new System.Drawing.Point(133, 144);
             this.textBox63.Name = "textBox63";
+            this.textBox63.ReadOnly = true;
             this.textBox63.Size = new System.Drawing.Size(23, 23);
             this.textBox63.TabIndex = 60;
             this.textBox63.Text = "2";
@@ -849,6 +899,7 @@ namespace Model_LR_01
             // 
             this.textBox64.Location = new System.Drawing.Point(112, 144);
             this.textBox64.Name = "textBox64";
+            this.textBox64.ReadOnly = true;
             this.textBox64.Size = new System.Drawing.Size(23, 23);
             this.textBox64.TabIndex = 59;
             this.textBox64.Text = "2";
@@ -858,6 +909,7 @@ namespace Model_LR_01
             // 
             this.textBox65.Location = new System.Drawing.Point(90, 144);
             this.textBox65.Name = "textBox65";
+            this.textBox65.ReadOnly = true;
             this.textBox65.Size = new System.Drawing.Size(23, 23);
             this.textBox65.TabIndex = 58;
             this.textBox65.Text = "2";
@@ -867,6 +919,7 @@ namespace Model_LR_01
             // 
             this.textBox66.Location = new System.Drawing.Point(69, 144);
             this.textBox66.Name = "textBox66";
+            this.textBox66.ReadOnly = true;
             this.textBox66.Size = new System.Drawing.Size(23, 23);
             this.textBox66.TabIndex = 57;
             this.textBox66.Text = "2";
@@ -876,6 +929,7 @@ namespace Model_LR_01
             // 
             this.textBox67.Location = new System.Drawing.Point(47, 144);
             this.textBox67.Name = "textBox67";
+            this.textBox67.ReadOnly = true;
             this.textBox67.Size = new System.Drawing.Size(23, 23);
             this.textBox67.TabIndex = 56;
             this.textBox67.Text = "2";
@@ -886,6 +940,7 @@ namespace Model_LR_01
             this.textBox68.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBox68.Location = new System.Drawing.Point(26, 144);
             this.textBox68.Name = "textBox68";
+            this.textBox68.ReadOnly = true;
             this.textBox68.Size = new System.Drawing.Size(23, 23);
             this.textBox68.TabIndex = 55;
             this.textBox68.Text = "/";
@@ -894,6 +949,7 @@ namespace Model_LR_01
             // 
             this.textBox47.Location = new System.Drawing.Point(241, 122);
             this.textBox47.Name = "textBox47";
+            this.textBox47.ReadOnly = true;
             this.textBox47.Size = new System.Drawing.Size(23, 23);
             this.textBox47.TabIndex = 54;
             this.textBox47.Text = "6";
@@ -903,6 +959,7 @@ namespace Model_LR_01
             // 
             this.textBox48.Location = new System.Drawing.Point(219, 122);
             this.textBox48.Name = "textBox48";
+            this.textBox48.ReadOnly = true;
             this.textBox48.Size = new System.Drawing.Size(23, 23);
             this.textBox48.TabIndex = 53;
             this.textBox48.Text = "1";
@@ -912,6 +969,7 @@ namespace Model_LR_01
             // 
             this.textBox49.Location = new System.Drawing.Point(198, 122);
             this.textBox49.Name = "textBox49";
+            this.textBox49.ReadOnly = true;
             this.textBox49.Size = new System.Drawing.Size(23, 23);
             this.textBox49.TabIndex = 52;
             this.textBox49.Text = "2";
@@ -921,6 +979,7 @@ namespace Model_LR_01
             // 
             this.textBox50.Location = new System.Drawing.Point(176, 122);
             this.textBox50.Name = "textBox50";
+            this.textBox50.ReadOnly = true;
             this.textBox50.Size = new System.Drawing.Size(23, 23);
             this.textBox50.TabIndex = 51;
             this.textBox50.Text = "1";
@@ -930,6 +989,7 @@ namespace Model_LR_01
             // 
             this.textBox51.Location = new System.Drawing.Point(155, 122);
             this.textBox51.Name = "textBox51";
+            this.textBox51.ReadOnly = true;
             this.textBox51.Size = new System.Drawing.Size(23, 23);
             this.textBox51.TabIndex = 50;
             this.textBox51.Text = "1";
@@ -939,6 +999,7 @@ namespace Model_LR_01
             // 
             this.textBox52.Location = new System.Drawing.Point(133, 122);
             this.textBox52.Name = "textBox52";
+            this.textBox52.ReadOnly = true;
             this.textBox52.Size = new System.Drawing.Size(23, 23);
             this.textBox52.TabIndex = 49;
             this.textBox52.Text = "2";
@@ -948,6 +1009,7 @@ namespace Model_LR_01
             // 
             this.textBox53.Location = new System.Drawing.Point(112, 122);
             this.textBox53.Name = "textBox53";
+            this.textBox53.ReadOnly = true;
             this.textBox53.Size = new System.Drawing.Size(23, 23);
             this.textBox53.TabIndex = 48;
             this.textBox53.Text = "2";
@@ -957,6 +1019,7 @@ namespace Model_LR_01
             // 
             this.textBox54.Location = new System.Drawing.Point(90, 122);
             this.textBox54.Name = "textBox54";
+            this.textBox54.ReadOnly = true;
             this.textBox54.Size = new System.Drawing.Size(23, 23);
             this.textBox54.TabIndex = 47;
             this.textBox54.Text = "2";
@@ -966,6 +1029,7 @@ namespace Model_LR_01
             // 
             this.textBox55.Location = new System.Drawing.Point(69, 122);
             this.textBox55.Name = "textBox55";
+            this.textBox55.ReadOnly = true;
             this.textBox55.Size = new System.Drawing.Size(23, 23);
             this.textBox55.TabIndex = 46;
             this.textBox55.Text = "2";
@@ -975,6 +1039,7 @@ namespace Model_LR_01
             // 
             this.textBox56.Location = new System.Drawing.Point(47, 122);
             this.textBox56.Name = "textBox56";
+            this.textBox56.ReadOnly = true;
             this.textBox56.Size = new System.Drawing.Size(23, 23);
             this.textBox56.TabIndex = 45;
             this.textBox56.Text = "2";
@@ -985,6 +1050,7 @@ namespace Model_LR_01
             this.textBox57.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBox57.Location = new System.Drawing.Point(26, 122);
             this.textBox57.Name = "textBox57";
+            this.textBox57.ReadOnly = true;
             this.textBox57.Size = new System.Drawing.Size(23, 23);
             this.textBox57.TabIndex = 44;
             this.textBox57.Text = "*";
@@ -993,6 +1059,7 @@ namespace Model_LR_01
             // 
             this.textBox36.Location = new System.Drawing.Point(241, 100);
             this.textBox36.Name = "textBox36";
+            this.textBox36.ReadOnly = true;
             this.textBox36.Size = new System.Drawing.Size(23, 23);
             this.textBox36.TabIndex = 43;
             this.textBox36.Text = "6";
@@ -1002,6 +1069,7 @@ namespace Model_LR_01
             // 
             this.textBox37.Location = new System.Drawing.Point(219, 100);
             this.textBox37.Name = "textBox37";
+            this.textBox37.ReadOnly = true;
             this.textBox37.Size = new System.Drawing.Size(23, 23);
             this.textBox37.TabIndex = 42;
             this.textBox37.Text = "1";
@@ -1011,6 +1079,7 @@ namespace Model_LR_01
             // 
             this.textBox38.Location = new System.Drawing.Point(198, 100);
             this.textBox38.Name = "textBox38";
+            this.textBox38.ReadOnly = true;
             this.textBox38.Size = new System.Drawing.Size(23, 23);
             this.textBox38.TabIndex = 41;
             this.textBox38.Text = "2";
@@ -1020,6 +1089,7 @@ namespace Model_LR_01
             // 
             this.textBox39.Location = new System.Drawing.Point(176, 100);
             this.textBox39.Name = "textBox39";
+            this.textBox39.ReadOnly = true;
             this.textBox39.Size = new System.Drawing.Size(23, 23);
             this.textBox39.TabIndex = 40;
             this.textBox39.Text = "1";
@@ -1029,6 +1099,7 @@ namespace Model_LR_01
             // 
             this.textBox40.Location = new System.Drawing.Point(155, 100);
             this.textBox40.Name = "textBox40";
+            this.textBox40.ReadOnly = true;
             this.textBox40.Size = new System.Drawing.Size(23, 23);
             this.textBox40.TabIndex = 39;
             this.textBox40.Text = "1";
@@ -1038,6 +1109,7 @@ namespace Model_LR_01
             // 
             this.textBox41.Location = new System.Drawing.Point(133, 100);
             this.textBox41.Name = "textBox41";
+            this.textBox41.ReadOnly = true;
             this.textBox41.Size = new System.Drawing.Size(23, 23);
             this.textBox41.TabIndex = 38;
             this.textBox41.Text = "1";
@@ -1047,6 +1119,7 @@ namespace Model_LR_01
             // 
             this.textBox42.Location = new System.Drawing.Point(112, 100);
             this.textBox42.Name = "textBox42";
+            this.textBox42.ReadOnly = true;
             this.textBox42.Size = new System.Drawing.Size(23, 23);
             this.textBox42.TabIndex = 37;
             this.textBox42.Text = "1";
@@ -1056,6 +1129,7 @@ namespace Model_LR_01
             // 
             this.textBox43.Location = new System.Drawing.Point(90, 100);
             this.textBox43.Name = "textBox43";
+            this.textBox43.ReadOnly = true;
             this.textBox43.Size = new System.Drawing.Size(23, 23);
             this.textBox43.TabIndex = 36;
             this.textBox43.Text = "2";
@@ -1065,6 +1139,7 @@ namespace Model_LR_01
             // 
             this.textBox44.Location = new System.Drawing.Point(69, 100);
             this.textBox44.Name = "textBox44";
+            this.textBox44.ReadOnly = true;
             this.textBox44.Size = new System.Drawing.Size(23, 23);
             this.textBox44.TabIndex = 35;
             this.textBox44.Text = "2";
@@ -1074,6 +1149,7 @@ namespace Model_LR_01
             // 
             this.textBox45.Location = new System.Drawing.Point(47, 100);
             this.textBox45.Name = "textBox45";
+            this.textBox45.ReadOnly = true;
             this.textBox45.Size = new System.Drawing.Size(23, 23);
             this.textBox45.TabIndex = 34;
             this.textBox45.Text = "2";
@@ -1084,6 +1160,7 @@ namespace Model_LR_01
             this.textBox46.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBox46.Location = new System.Drawing.Point(26, 100);
             this.textBox46.Name = "textBox46";
+            this.textBox46.ReadOnly = true;
             this.textBox46.Size = new System.Drawing.Size(23, 23);
             this.textBox46.TabIndex = 33;
             this.textBox46.Text = "-";
@@ -1092,6 +1169,7 @@ namespace Model_LR_01
             // 
             this.textBox25.Location = new System.Drawing.Point(241, 78);
             this.textBox25.Name = "textBox25";
+            this.textBox25.ReadOnly = true;
             this.textBox25.Size = new System.Drawing.Size(23, 23);
             this.textBox25.TabIndex = 32;
             this.textBox25.Text = "6";
@@ -1101,6 +1179,7 @@ namespace Model_LR_01
             // 
             this.textBox26.Location = new System.Drawing.Point(219, 78);
             this.textBox26.Name = "textBox26";
+            this.textBox26.ReadOnly = true;
             this.textBox26.Size = new System.Drawing.Size(23, 23);
             this.textBox26.TabIndex = 31;
             this.textBox26.Text = "1";
@@ -1110,6 +1189,7 @@ namespace Model_LR_01
             // 
             this.textBox27.Location = new System.Drawing.Point(198, 78);
             this.textBox27.Name = "textBox27";
+            this.textBox27.ReadOnly = true;
             this.textBox27.Size = new System.Drawing.Size(23, 23);
             this.textBox27.TabIndex = 30;
             this.textBox27.Text = "2";
@@ -1119,6 +1199,7 @@ namespace Model_LR_01
             // 
             this.textBox28.Location = new System.Drawing.Point(176, 78);
             this.textBox28.Name = "textBox28";
+            this.textBox28.ReadOnly = true;
             this.textBox28.Size = new System.Drawing.Size(23, 23);
             this.textBox28.TabIndex = 29;
             this.textBox28.Text = "1";
@@ -1128,6 +1209,7 @@ namespace Model_LR_01
             // 
             this.textBox29.Location = new System.Drawing.Point(155, 78);
             this.textBox29.Name = "textBox29";
+            this.textBox29.ReadOnly = true;
             this.textBox29.Size = new System.Drawing.Size(23, 23);
             this.textBox29.TabIndex = 28;
             this.textBox29.Text = "1";
@@ -1137,6 +1219,7 @@ namespace Model_LR_01
             // 
             this.textBox30.Location = new System.Drawing.Point(133, 78);
             this.textBox30.Name = "textBox30";
+            this.textBox30.ReadOnly = true;
             this.textBox30.Size = new System.Drawing.Size(23, 23);
             this.textBox30.TabIndex = 27;
             this.textBox30.Text = "1";
@@ -1146,6 +1229,7 @@ namespace Model_LR_01
             // 
             this.textBox31.Location = new System.Drawing.Point(112, 78);
             this.textBox31.Name = "textBox31";
+            this.textBox31.ReadOnly = true;
             this.textBox31.Size = new System.Drawing.Size(23, 23);
             this.textBox31.TabIndex = 26;
             this.textBox31.Text = "1";
@@ -1155,6 +1239,7 @@ namespace Model_LR_01
             // 
             this.textBox32.Location = new System.Drawing.Point(90, 78);
             this.textBox32.Name = "textBox32";
+            this.textBox32.ReadOnly = true;
             this.textBox32.Size = new System.Drawing.Size(23, 23);
             this.textBox32.TabIndex = 25;
             this.textBox32.Text = "2";
@@ -1164,6 +1249,7 @@ namespace Model_LR_01
             // 
             this.textBox33.Location = new System.Drawing.Point(69, 78);
             this.textBox33.Name = "textBox33";
+            this.textBox33.ReadOnly = true;
             this.textBox33.Size = new System.Drawing.Size(23, 23);
             this.textBox33.TabIndex = 24;
             this.textBox33.Text = "2";
@@ -1173,6 +1259,7 @@ namespace Model_LR_01
             // 
             this.textBox34.Location = new System.Drawing.Point(47, 78);
             this.textBox34.Name = "textBox34";
+            this.textBox34.ReadOnly = true;
             this.textBox34.Size = new System.Drawing.Size(23, 23);
             this.textBox34.TabIndex = 23;
             this.textBox34.Text = "2";
@@ -1183,6 +1270,7 @@ namespace Model_LR_01
             this.textBox35.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBox35.Location = new System.Drawing.Point(26, 78);
             this.textBox35.Name = "textBox35";
+            this.textBox35.ReadOnly = true;
             this.textBox35.Size = new System.Drawing.Size(23, 23);
             this.textBox35.TabIndex = 22;
             this.textBox35.Text = "+";
@@ -1191,6 +1279,7 @@ namespace Model_LR_01
             // 
             this.textBox14.Location = new System.Drawing.Point(241, 56);
             this.textBox14.Name = "textBox14";
+            this.textBox14.ReadOnly = true;
             this.textBox14.Size = new System.Drawing.Size(23, 23);
             this.textBox14.TabIndex = 21;
             this.textBox14.Text = "6";
@@ -1200,6 +1289,7 @@ namespace Model_LR_01
             // 
             this.textBox15.Location = new System.Drawing.Point(219, 56);
             this.textBox15.Name = "textBox15";
+            this.textBox15.ReadOnly = true;
             this.textBox15.Size = new System.Drawing.Size(23, 23);
             this.textBox15.TabIndex = 20;
             this.textBox15.Text = "1";
@@ -1209,6 +1299,7 @@ namespace Model_LR_01
             // 
             this.textBox16.Location = new System.Drawing.Point(198, 56);
             this.textBox16.Name = "textBox16";
+            this.textBox16.ReadOnly = true;
             this.textBox16.Size = new System.Drawing.Size(23, 23);
             this.textBox16.TabIndex = 19;
             this.textBox16.Text = "5";
@@ -1218,6 +1309,7 @@ namespace Model_LR_01
             // 
             this.textBox17.Location = new System.Drawing.Point(176, 56);
             this.textBox17.Name = "textBox17";
+            this.textBox17.ReadOnly = true;
             this.textBox17.Size = new System.Drawing.Size(23, 23);
             this.textBox17.TabIndex = 18;
             this.textBox17.Text = "1";
@@ -1227,6 +1319,7 @@ namespace Model_LR_01
             // 
             this.textBox18.Location = new System.Drawing.Point(155, 56);
             this.textBox18.Name = "textBox18";
+            this.textBox18.ReadOnly = true;
             this.textBox18.Size = new System.Drawing.Size(23, 23);
             this.textBox18.TabIndex = 17;
             this.textBox18.Text = "1";
@@ -1236,6 +1329,7 @@ namespace Model_LR_01
             // 
             this.textBox19.Location = new System.Drawing.Point(133, 56);
             this.textBox19.Name = "textBox19";
+            this.textBox19.ReadOnly = true;
             this.textBox19.Size = new System.Drawing.Size(23, 23);
             this.textBox19.TabIndex = 16;
             this.textBox19.Text = "1";
@@ -1245,6 +1339,7 @@ namespace Model_LR_01
             // 
             this.textBox20.Location = new System.Drawing.Point(112, 56);
             this.textBox20.Name = "textBox20";
+            this.textBox20.ReadOnly = true;
             this.textBox20.Size = new System.Drawing.Size(23, 23);
             this.textBox20.TabIndex = 15;
             this.textBox20.Text = "1";
@@ -1254,6 +1349,7 @@ namespace Model_LR_01
             // 
             this.textBox21.Location = new System.Drawing.Point(90, 56);
             this.textBox21.Name = "textBox21";
+            this.textBox21.ReadOnly = true;
             this.textBox21.Size = new System.Drawing.Size(23, 23);
             this.textBox21.TabIndex = 14;
             this.textBox21.Text = "1";
@@ -1263,6 +1359,7 @@ namespace Model_LR_01
             // 
             this.textBox22.Location = new System.Drawing.Point(69, 56);
             this.textBox22.Name = "textBox22";
+            this.textBox22.ReadOnly = true;
             this.textBox22.Size = new System.Drawing.Size(23, 23);
             this.textBox22.TabIndex = 13;
             this.textBox22.Text = "1";
@@ -1272,6 +1369,7 @@ namespace Model_LR_01
             // 
             this.textBox23.Location = new System.Drawing.Point(47, 56);
             this.textBox23.Name = "textBox23";
+            this.textBox23.ReadOnly = true;
             this.textBox23.Size = new System.Drawing.Size(23, 23);
             this.textBox23.TabIndex = 12;
             this.textBox23.Text = "4";
@@ -1282,6 +1380,7 @@ namespace Model_LR_01
             this.textBox24.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBox24.Location = new System.Drawing.Point(26, 56);
             this.textBox24.Name = "textBox24";
+            this.textBox24.ReadOnly = true;
             this.textBox24.Size = new System.Drawing.Size(23, 23);
             this.textBox24.TabIndex = 11;
             this.textBox24.Text = "$";
@@ -1291,6 +1390,7 @@ namespace Model_LR_01
             this.textBox13.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBox13.Location = new System.Drawing.Point(241, 34);
             this.textBox13.Name = "textBox13";
+            this.textBox13.ReadOnly = true;
             this.textBox13.Size = new System.Drawing.Size(23, 23);
             this.textBox13.TabIndex = 10;
             this.textBox13.Text = "P";
@@ -1301,6 +1401,7 @@ namespace Model_LR_01
             this.textBox11.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBox11.Location = new System.Drawing.Point(219, 34);
             this.textBox11.Name = "textBox11";
+            this.textBox11.ReadOnly = true;
             this.textBox11.Size = new System.Drawing.Size(23, 23);
             this.textBox11.TabIndex = 9;
             this.textBox11.Text = "F";
@@ -1311,6 +1412,7 @@ namespace Model_LR_01
             this.textBox12.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBox12.Location = new System.Drawing.Point(198, 34);
             this.textBox12.Name = "textBox12";
+            this.textBox12.ReadOnly = true;
             this.textBox12.Size = new System.Drawing.Size(23, 23);
             this.textBox12.TabIndex = 8;
             this.textBox12.Text = ")";
@@ -1321,6 +1423,7 @@ namespace Model_LR_01
             this.textBox9.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBox9.Location = new System.Drawing.Point(176, 34);
             this.textBox9.Name = "textBox9";
+            this.textBox9.ReadOnly = true;
             this.textBox9.Size = new System.Drawing.Size(23, 23);
             this.textBox9.TabIndex = 7;
             this.textBox9.Text = "(";
@@ -1331,6 +1434,7 @@ namespace Model_LR_01
             this.textBox10.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBox10.Location = new System.Drawing.Point(155, 34);
             this.textBox10.Name = "textBox10";
+            this.textBox10.ReadOnly = true;
             this.textBox10.Size = new System.Drawing.Size(23, 23);
             this.textBox10.TabIndex = 6;
             this.textBox10.Text = "^";
@@ -1341,6 +1445,7 @@ namespace Model_LR_01
             this.textBox7.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBox7.Location = new System.Drawing.Point(133, 34);
             this.textBox7.Name = "textBox7";
+            this.textBox7.ReadOnly = true;
             this.textBox7.Size = new System.Drawing.Size(23, 23);
             this.textBox7.TabIndex = 5;
             this.textBox7.Text = "/";
@@ -1351,6 +1456,7 @@ namespace Model_LR_01
             this.textBox8.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBox8.Location = new System.Drawing.Point(112, 34);
             this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
             this.textBox8.Size = new System.Drawing.Size(23, 23);
             this.textBox8.TabIndex = 4;
             this.textBox8.Text = "*";
@@ -1361,6 +1467,7 @@ namespace Model_LR_01
             this.textBox5.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBox5.Location = new System.Drawing.Point(90, 34);
             this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(23, 23);
             this.textBox5.TabIndex = 3;
             this.textBox5.Text = "-";
@@ -1371,6 +1478,7 @@ namespace Model_LR_01
             this.textBox6.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBox6.Location = new System.Drawing.Point(69, 34);
             this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(23, 23);
             this.textBox6.TabIndex = 2;
             this.textBox6.Text = "+";
@@ -1381,6 +1489,7 @@ namespace Model_LR_01
             this.textBox4.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBox4.Location = new System.Drawing.Point(47, 34);
             this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(23, 23);
             this.textBox4.TabIndex = 1;
             this.textBox4.Text = "$";
@@ -1391,6 +1500,7 @@ namespace Model_LR_01
             this.textBox3.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBox3.Location = new System.Drawing.Point(26, 34);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(23, 23);
             this.textBox3.TabIndex = 0;
             // 
@@ -1442,6 +1552,7 @@ namespace Model_LR_01
             this.Automode_radioButton.TabStop = true;
             this.Automode_radioButton.Text = "Автоматический";
             this.Automode_radioButton.UseVisualStyleBackColor = true;
+            this.Automode_radioButton.CheckedChanged += new System.EventHandler(this.Automode_radioButton_CheckedChanged);
             // 
             // Stepmode_radioButton
             // 
@@ -1452,6 +1563,7 @@ namespace Model_LR_01
             this.Stepmode_radioButton.TabIndex = 0;
             this.Stepmode_radioButton.Text = "Пошаговый";
             this.Stepmode_radioButton.UseVisualStyleBackColor = true;
+            this.Stepmode_radioButton.CheckedChanged += new System.EventHandler(this.Stepmode_radioButton_CheckedChanged);
             // 
             // Step_trackBar
             // 
@@ -1460,6 +1572,7 @@ namespace Model_LR_01
             this.Step_trackBar.Name = "Step_trackBar";
             this.Step_trackBar.Size = new System.Drawing.Size(581, 45);
             this.Step_trackBar.TabIndex = 2;
+            this.Step_trackBar.ValueChanged += new System.EventHandler(this.Step_trackBar_ValueChanged);
             // 
             // label17
             // 
@@ -1498,13 +1611,27 @@ namespace Model_LR_01
             this.Stop_button.Text = "Стоп";
             this.Stop_button.UseVisualStyleBackColor = true;
             // 
-            // error_label
+            // nextTact_button
             // 
-            this.error_label.AutoSize = true;
-            this.error_label.Location = new System.Drawing.Point(466, 59);
-            this.error_label.Name = "error_label";
-            this.error_label.Size = new System.Drawing.Size(0, 15);
-            this.error_label.TabIndex = 13;
+            this.nextTact_button.Location = new System.Drawing.Point(253, 526);
+            this.nextTact_button.Name = "nextTact_button";
+            this.nextTact_button.Size = new System.Drawing.Size(95, 23);
+            this.nextTact_button.TabIndex = 15;
+            this.nextTact_button.Text = "Такт";
+            this.nextTact_button.UseVisualStyleBackColor = true;
+            this.nextTact_button.Visible = false;
+            this.nextTact_button.Click += new System.EventHandler(this.nextTact_button_Click);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.ForeColor = System.Drawing.Color.Red;
+            this.label19.Location = new System.Drawing.Point(479, 59);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(150, 15);
+            this.label19.TabIndex = 14;
+            this.label19.Text = "Задайте входную строку!!!";
+            this.label19.Visible = false;
             // 
             // Form1
             // 
@@ -1512,6 +1639,7 @@ namespace Model_LR_01
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1225, 638);
+            this.Controls.Add(this.nextTact_button);
             this.Controls.Add(this.Stop_button);
             this.Controls.Add(this.Start_button);
             this.Controls.Add(this.label18);
@@ -1650,9 +1778,9 @@ namespace Model_LR_01
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox CurrentFormula_textBox;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox stack_listBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox cursor_listBox;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label15;
@@ -1671,6 +1799,8 @@ namespace Model_LR_01
         private System.Windows.Forms.Button Start_button;
         private System.Windows.Forms.Button Stop_button;
         private System.Windows.Forms.Label error_label;
+        private System.Windows.Forms.Button nextTact_button;
+        private System.Windows.Forms.Label label19;
     }
 }
 

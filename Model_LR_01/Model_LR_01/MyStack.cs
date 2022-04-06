@@ -46,6 +46,7 @@ namespace Model_LR_01
             }
             Node<T> current_head = head;
             head = head.next;
+            count--;
             return current_head.Data;
         }
         public T Peek()
